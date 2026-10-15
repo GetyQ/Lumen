@@ -16,19 +16,19 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font-family);
-    background-color: var(--backround-color);
+    background-color: var(--bwhite-color);
 }
 main {
     flex-grow: 1;
 }
 :root {
     --main-font-family: 'Inter', sans-serif;
-    --backround-color: #fff5f0;
-    --background-color: #451D00;
-    --background-color: #FFFFFF;
-    --background-color: #1A0B00;
-    --background-color: #FF7931;
+    --bwhite-color: #fff5f0;
+    --shadow-color: #451D00;
+    --white-color: #FFFFFF;
+    --black-color: #1A0B00;
+    --orange-color: #FF7931;
 }
-header {
-    box-shadow: 0, 2, 20, #451D00;
+.header {
+    box-shadow:0 2 20px var(--shadow-color);
 }
