@@ -4,6 +4,7 @@
     padding:  0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter';
 }
 .container {
     position: relative;
@@ -14,7 +15,20 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--main-font-family);
+    background-color: var(--backround-color);
 }
 main {
     flex-grow: 1;
+}
+:root {
+    --main-font-family: 'Inter', sans-serif;
+    --backround-color: #fff5f0;
+    --background-color: #451D00;
+    --background-color: #FFFFFF;
+    --background-color: #1A0B00;
+    --background-color: #FF7931;
+}
+header {
+    box-shadow: 0, 2, 20, #451D00;
 }
