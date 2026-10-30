@@ -32,3 +32,7 @@ main {
 .header {
     box-shadow:0 2 20px var(--shadow-color);
 }
+.header_container {
+    flex: content;
+    gap: ;
+}
