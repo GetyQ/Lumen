@@ -1,11 +1,9 @@
-/* Стандартный сброс */
 *, *::before, *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Переменные и шрифты */
 :root {
     --main-font-family: 'Inter', sans-serif;
     --background-color: #FFF5F0;
@@ -14,10 +12,10 @@
     --button-font-color: #FFFFFF;
     --background-card: #FFFFFF;
     --background-form-elem: #FFFFFF;
-    --shadow-color: rgba(69, 29, 0, 0.1);
+    --shadow-color: #451D00;
 }
 
-/* Темная тема (Задание 5 ПР2) */
+
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #1A0B00;
@@ -40,7 +38,7 @@ body {
 
 main {
     flex-grow: 1;
-    margin-top: 80px; /* Отступ для фиксированной шапки (Задание 8 ПР1) */
+    margin-top: 80px;
 }
 
 .container {
@@ -59,7 +57,6 @@ main {
     margin-bottom: 40px;
 }
 
-/* ================= ШАПКА ================= */
 .header {
     position: fixed;
     top: 0;
@@ -106,7 +103,6 @@ ul {
     color: var(--accent-color);
 }
 
-/* Кнопка-бургер */
 .btn-burger {
     display: none; 
     background: none;
@@ -119,7 +115,6 @@ ul {
     opacity: 0.7;
 }
 
-/* Мобильное меню (Задание 4 ПР2) */
 .header__mobilemenu {
     display: none;
     position: absolute;
@@ -158,7 +153,7 @@ ul {
     border: none;
     cursor: pointer;
     transition: transform 0.2s;
-    width: 44px; /* Увеличено для доступности */
+    width: 44px;
     height: 44px;
     display: flex;
     align-items: center;
@@ -173,7 +168,6 @@ ul {
     display: block;
 }
 
-/* ================= БАННЕР ================= */
 .banner {
     padding-top: 40px;
 }
@@ -208,7 +202,7 @@ ul {
     cursor: pointer;
     width: 100%;
     max-width: 340px;
-    min-height: 44px; /* Доступность */
+    min-height: 44px;
     transition: opacity 0.2s;
 }
 
@@ -225,7 +219,6 @@ ul {
     object-fit: cover;
 }
 
-/* ================= О НАС ================= */
 .about__content {
     display: flex;
     gap: 40px;
@@ -251,7 +244,6 @@ ul {
     align-items: center;
 }
 
-/* Блок со статистикой (Задание "Самостоятельное" ПР1, flex-wrap) */
 .about__stats {
     display: flex;
     flex-wrap: wrap;
@@ -262,7 +254,7 @@ ul {
 .stat__card {
     border: 1px solid var(--accent-color);
     padding: 30px 20px;
-    width: calc(33.333% - 14px); /* 3 карточки в ряд */
+    width: calc(33.333% - 14px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,7 +272,6 @@ ul {
     color: var(--font-color);
 }
 
-/* ================= КАТАЛОГ ================= */
 .catalog__wrapper {
     overflow-x: hidden; 
     margin-bottom: 40px;
@@ -339,13 +330,12 @@ ul {
     opacity: 0.8;
 }
 
-/* Кнопка + (Задание 8 ПР1) */
 .card__btn-add {
     position: absolute;
-    top: 26px; /* Скорректировано под размер 44px */
+    top: 26px;
     right: 26px;
-    width: 44px; /* Увеличено до 44px для доступности */
-    height: 44px; /* Увеличено до 44px для доступности */
+    width: 44px;
+    height: 44px;
     background-color: var(--background-card);
     color: var(--font-color);
     border: none;
@@ -386,7 +376,6 @@ ul {
     opacity: 0.8;
 }
 
-/* ================= ОБРАТНАЯ СВЯЗЬ ================= */
 .feedback .container {
     display: flex;
     gap: 40px; 
@@ -439,7 +428,7 @@ ul {
     font-size: 16px;
     outline: none;
     transition: border 0.2s;
-    min-height: 44px; /* Доступность */
+    min-height: 44px;
 }
 
 .form__elem:focus {
@@ -470,7 +459,6 @@ ul {
     opacity: 0.8;
 }
 
-/* Позиционирование SVG-иконок в форме (Задание 8 ПР1) */
 .form__item svg {
     position: absolute;
     right: 20px;
@@ -479,13 +467,11 @@ ul {
     pointer-events: none;
 }
 
-/* Для textarea иконку поднимаем выше */
 .form__item .form__textarea + svg {
     top: 30px;
     transform: none;
 }
 
-/* ================= ПОДВАЛ ================= */
 .contacts {
     padding-top: 60px;
     padding-bottom: 40px;
@@ -526,8 +512,8 @@ ul {
     color: var(--font-color);
     text-decoration: none;
     font-weight: 500;
-    min-height: 44px; /* Доступность */
-    display: inline-block; /* Чтобы padding работал корректно */
+    min-height: 44px;
+    display: inline-block;
     padding: 10px 0;
 }
 
@@ -555,9 +541,6 @@ ul {
     color: #FFFFFF;
 }
 
-/* ================= МЕДИА-ЗАПРОСЫ (ПР2) ================= */
-
-/* 1240px */
 @media (max-width: 1240px) {
     .container {
         padding-right: 16px;
@@ -565,7 +548,6 @@ ul {
     }
 }
 
-/* 1024px (Скрываем картинку в обратной связи) */
 @media (max-width: 1024px) {
     .banner__title {
         font-size: 80px;
@@ -597,7 +579,6 @@ ul {
     }
 }
 
-/* 970px (Запрещаем сжиматься карточкам каталога) */
 @media (max-width: 970px) {
     .catalog__card {
         width: 225px;
@@ -608,14 +589,12 @@ ul {
     }
 }
 
-/* 640px (Мобильная версия) */
 @media (max-width: 640px) {
-    /* Шапка */
     .header__mainmenu {
         display: none;
     }
     .btn-burger {
-        display: flex; /* Изменено на flex для центрирования */
+        display: flex;
         align-items: center;
         justify-content: center;
         width: 44px;
@@ -625,13 +604,11 @@ ul {
         font-size: 32px;
     }
     
-    /* Заголовки */
     .section__title, .feedback__title, .contacts__title {
         font-size: 32px;
         margin-bottom: 20px;
     }
     
-    /* Баннер */
     .banner__title {
         font-size: 50px;
     }
@@ -645,12 +622,10 @@ ul {
         max-width: 100%;
     }
     
-    /* Статистика */
     .stat__card {
         width: 100%;
     }
     
-    /* Каталог */
     .catalog__card {
         width: 171px;
         padding: 10px;
@@ -665,11 +640,10 @@ ul {
         font-size: 16px;
     }
     .card__btn {
-        height: 44px; /* Приведено к 44px */
+        height: 44px;
         font-size: 14px;
     }
     
-    /* Кнопка + */
     .card__btn-add {
         top: 15px;
         right: 15px;
@@ -678,7 +652,6 @@ ul {
         font-size: 20px;
     }
     
-    /* Кнопки слайдера */
     .catalog__button {
         display: none; 
     }
